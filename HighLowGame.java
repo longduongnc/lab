@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class HighLowGame {
-    public static void main(String[] args) throws InterruptedException {
+    
+    public void playGame() {
         
         Deck deck = new Deck();
         Scanner scnr = new Scanner(System.in);
@@ -11,11 +12,8 @@ public class HighLowGame {
         
         while (play == 1){
             Card card1 = deck.drawCard();
-            Thread.sleep(500);
             System.out.println("The first card is " + card1.declareCard());
-            Thread.sleep(500);
             System.out.println("Will the next card higher or lower? ");
-            Thread.sleep(500);
             System.out.println("Enter 1 for lower, 2 for higher.");
 
             int choice = scnr.nextInt();
@@ -30,11 +28,10 @@ public class HighLowGame {
                 System.out.println("Sorry, your guess was incorrect :(");
             }
 
-            Thread.sleep(500);
             System.out.println("enter 1 to play again, 0 to exit");
             play = scnr.nextInt();
         }
 
-        scnr.close();
+        //scnr.close();
     }
 }

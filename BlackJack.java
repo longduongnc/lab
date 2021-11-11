@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class BlackJack {
-    public static void main(String[] args) throws InterruptedException {
+    
+    public void playGame() throws InterruptedException {
         Deck deck = new Deck();
         Scanner scnr = new Scanner(System.in);
 
@@ -78,6 +79,6 @@ public class BlackJack {
             System.out.println("enter 1 to play again, 0 to exit");
             play = scnr.nextInt();
         }
-        scnr.close();
+        //scnr.close();
     }
 }
